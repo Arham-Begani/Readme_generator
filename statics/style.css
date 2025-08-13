@@ -30,3 +30,15 @@ label {
     display: block;
     color: #555;
 }
+
+input, textarea, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: white;
+    color: #333;
+}
