@@ -16,9 +16,10 @@ def home():
 @app.route("/generate", methods=["POST"])
 def generate():
     description = request.form.get("description", "")
+    language = request.form.get("language", "English")
     
 
-    prompt = f"""Generate a professional, well-formatted README.md in English.
+    prompt = f"""Generate a professional, well-formatted README.md in {language}.
     The project description is:
     {description}
 
@@ -30,7 +31,7 @@ def generate():
 
     readme_content = response.text or "Error generating README."
 
-    # Save to in-memory file
+    
     file_stream = BytesIO()
     file_stream.write(readme_content.encode('utf-8'))
     file_stream.seek(0)
