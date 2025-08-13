@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI README Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI README Generator</h1>
+
+        <form id="readmeForm" method="POST" action="/generate" target="_blank">
+            <label for="description">Project Description</label>
+            <textarea name="description" placeholder="Describe your project..." required></textarea>
+
+            
+
+            <button type="submit">Generate and Download README</button>
+        </form>
+    </div>
+</body>
+</html>
