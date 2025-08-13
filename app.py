@@ -17,13 +17,13 @@ def home():
 def generate():
     description = request.form.get("description", "")
     language = request.form.get("language", "English")
-    
+    license_type = request.form.get("license", "None")
 
     prompt = f"""Generate a professional, well-formatted README.md in {language}.
     The project description is:
     {description}
 
-    
+    Include a 'License' section using: {license_type}.
     """
 
     model = genai.GenerativeModel("gemini-1.5-flash")
@@ -31,7 +31,7 @@ def generate():
 
     readme_content = response.text or "Error generating README."
 
-    
+
     file_stream = BytesIO()
     file_stream.write(readme_content.encode('utf-8'))
     file_stream.seek(0)
