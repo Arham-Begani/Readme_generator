@@ -52,3 +52,13 @@ select {
     background: white;
     color: #333;
 }
+
+button {
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
