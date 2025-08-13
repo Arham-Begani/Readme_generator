@@ -42,3 +42,13 @@ input, textarea, select, button {
     background: white;
     color: #333;
 }
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+select {
+    background: white;
+    color: #333;
+}
