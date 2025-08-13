@@ -25,7 +25,7 @@ def generate():
     
     """
 
-    model = genai.GenerativeModel("gemini-1.5")
+    model = genai.GenerativeModel("gemini-1.5-flash")
     response = model.generate_content(prompt)
 
     readme_content = response.text or "Error generating README."
